@@ -1,4 +1,5 @@
 
+
  hosts: localhost
  connection: ssh
  become: true
@@ -26,3 +27,17 @@
          name: httpd
          state: enabled
 
+      name: Install htop
+     yum:
+         name: htop
+         state: present
+
+     name: start httpd
+     service:
+         name: httpd
+         state: started
+
+     name: Enable httpd
+     service:
+         name: httpd
+         state: enabled
