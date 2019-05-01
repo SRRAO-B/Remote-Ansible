@@ -15,3 +15,14 @@
      yum:
          name: htop
          state: present
+
+     name: start httpd
+     service:
+         name: httpd
+         state: started
+
+     name: Enable httpd
+     service:
+         name: httpd
+         state: enabled
+
